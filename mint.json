@@ -27,15 +27,23 @@
 	},
 	"tabs": [
 		{
+			"name": "Product",
+			"url": "product"
+		},
+		{
 			"name": "Developer Guides",
-			"url": "api"
+			"url": "developer-guides"
 		}
 	],
 	"anchors": [],
 	"navigation": [
 		{
 			"group": "Overview",
-			"pages": ["api/introduction"]
+			"pages": ["developer-guides/introduction"]
+		},
+		{
+			"group": "Overview",
+			"pages": ["product/introduction"]
 		}
 	],
 	"footerSocials": {
