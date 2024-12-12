@@ -15,6 +15,10 @@
 			"to": "#f4f4f5"
 		}
 	},
+	"modeToggle": {
+		"default": "light",
+		"isHidden": true
+	},
 	"topbarLinks": [
 		{
 			"name": "Support",
@@ -39,11 +43,11 @@
 	"navigation": [
 		{
 			"group": "Overview",
-			"pages": ["developer-guides/introduction"]
+			"pages": ["product/introduction"]
 		},
 		{
 			"group": "Overview",
-			"pages": ["product/introduction"]
+			"pages": ["developer-guides/introduction"]
 		}
 	],
 	"footerSocials": {
