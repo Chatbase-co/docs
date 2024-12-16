@@ -47,7 +47,7 @@
 		},
 		{
 			"group": "Overview",
-			"pages": ["developer-guides/introduction", "developer-guides/identity-verification", "developer-guides/chatbot-event-listeners"]
+			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners"]
 		}
 	],
 	"footerSocials": {

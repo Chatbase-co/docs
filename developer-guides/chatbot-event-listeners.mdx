@@ -2,6 +2,7 @@
 title: "Chatbot Event Listeners"
 icon: "code"
 ---
+
 ## Overview
 
 Chatbase enables developers to track and respond to key events during a chatbot's lifecycle. By using `window.chatbase.addEventListener` and `window.chatbase.removeEventListener`, you can listen for and handle specific events to create interactive and dynamic user experiences.
@@ -12,33 +13,17 @@ This guide explains how to initialize Chatbase, register event listeners, and ha
 
 ## How to Enable Event Listeners
 
-To ensure that the event listeners are available as soon as possible, you need to embed the Chatbase script correctly. Here’s how to do it in a JavaScript application:
+To ensure that the event listeners are available as soon as possible, you need to embed the Chatbase script correctly.
 
-```javascript
-<Script>
-  {`(function() {
-      if (!window.chatbase || window.chatbase('getState') !== 'initialized') {
-          window.chatbase = (...arguments) => {
-              window.chatbase.q = window.chatbase.q || [];
-              window.chatbase.q.push(arguments);
-          };
-          window.chatbase.addEventListener = (...arguments) => window.chatbase('addEventListener', arguments);
-          window.chatbase.removeEventListener = (...arguments) => window.chatbase('removeEventListener', arguments);
-      }
-      const onLoad = function() {
-          const script = document.createElement('script');
-          script.src = 'https://your-chatbase-url.com/embed.min.js';
-          script.id = process.env.NEXT_PUBLIC_CHATBASE_CHATBOT_ID;
-          document.body.appendChild(script);
-      };
-      if (document.readyState === 'complete') {
-          onLoad();
-      } else {
-          window.addEventListener('load', onLoad);
-      }
-  })()`}
-</Script>
-```
+**Follow these steps to get the embed code:**
+
+1. Visit the **Chatbase Dashboard**.
+2. Navigate to **Connect** > **Embed** > **Embed code with identity**.
+3. Copy the embed code and add it to your application.
+
+Here’s an example of the embed code you’ll find on the dashboard:
+
+![Chatbase Embed Code Example](images/chatbase-embed-script-example.png)
 
 This script ensures the Chatbase SDK is loaded properly, and the `addEventListener` and `removeEventListener` methods are available.
 
@@ -48,12 +33,12 @@ This script ensures the Chatbase SDK is loaded properly, and the `addEventListen
 
 The `eventName` parameter must be one of the following **enum** values:
 
-| **Event Name**      | **Description**                                  | **Payload**                                      |
-|---------------------|-------------------------------------------------|-------------------------------------------------|
-| `tool-call`         | Triggered when a tool is called.                 | `{ name, type, args, toolCallId }`               |
-| `tool-result`       | Triggered when a tool returns a result.         | `{ name, type, result, toolCallId }`             |
-| `user-message`      | Triggered when a user sends a message.          | `{ content }`                                   |
-| `assistant-message` | Triggered when the assistant sends a message.   | `{ content }`                                   |
+| **Event Name**      | **Description**                               | **Payload**                          |
+| ------------------- | --------------------------------------------- | ------------------------------------ |
+| `tool-call`         | Triggered when a tool is called.              | `{ name, type, args, toolCallId }`   |
+| `tool-result`       | Triggered when a tool returns a result.       | `{ name, type, result, toolCallId }` |
+| `user-message`      | Triggered when a user sends a message.        | `{ content }`                        |
+| `assistant-message` | Triggered when the assistant sends a message. | `{ content }`                        |
 
 ---
 
@@ -75,8 +60,8 @@ window.chatbase.addEventListener(eventName, callback);
 Listen for a user message:
 
 ```javascript
-window.chatbase.addEventListener('user-message', (event) => {
-  console.log('User message received:', event.content);
+window.chatbase.addEventListener("user-message", (event) => {
+  console.log("User message received:", event.content);
 });
 ```
 
@@ -101,14 +86,14 @@ Remove a user message listener:
 
 ```javascript
 const userMessageHandler = (event) => {
-  console.log('User message received:', event.content);
+  console.log("User message received:", event.content);
 };
 
 // Attach the event listener
-window.chatbase.addEventListener('user-message', userMessageHandler);
+window.chatbase.addEventListener("user-message", userMessageHandler);
 
 // Remove the event listener
-window.chatbase.removeEventListener('user-message', userMessageHandler);
+window.chatbase.removeEventListener("user-message", userMessageHandler);
 ```
 
 ---
@@ -143,7 +128,7 @@ Each event type has a specific payload. Below are the details for each event typ
 
   ```javascript
   {
-    content: 'Hello, chatbot!'
+    content: "Hello, chatbot!";
   }
   ```
 
@@ -151,7 +136,7 @@ Each event type has a specific payload. Below are the details for each event typ
 
   ```javascript
   {
-    content: 'Hello, user!'
+    content: "Hello, user!";
   }
   ```
 
