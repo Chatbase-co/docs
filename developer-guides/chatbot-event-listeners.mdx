@@ -1,0 +1,168 @@
+---
+title: "Chatbot Event Listeners"
+icon: "code"
+---
+## Overview
+
+Chatbase enables developers to track and respond to key events during a chatbot's lifecycle. By using `window.chatbase.addEventListener` and `window.chatbase.removeEventListener`, you can listen for and handle specific events to create interactive and dynamic user experiences.
+
+This guide explains how to initialize Chatbase, register event listeners, and handle event payloads.
+
+---
+
+## How to Enable Event Listeners
+
+To ensure that the event listeners are available as soon as possible, you need to embed the Chatbase script correctly. Here’s how to do it in a JavaScript application:
+
+```javascript
+<Script>
+  {`(function() {
+      if (!window.chatbase || window.chatbase('getState') !== 'initialized') {
+          window.chatbase = (...arguments) => {
+              window.chatbase.q = window.chatbase.q || [];
+              window.chatbase.q.push(arguments);
+          };
+          window.chatbase.addEventListener = (...arguments) => window.chatbase('addEventListener', arguments);
+          window.chatbase.removeEventListener = (...arguments) => window.chatbase('removeEventListener', arguments);
+      }
+      const onLoad = function() {
+          const script = document.createElement('script');
+          script.src = 'https://your-chatbase-url.com/embed.min.js';
+          script.id = process.env.NEXT_PUBLIC_CHATBASE_CHATBOT_ID;
+          document.body.appendChild(script);
+      };
+      if (document.readyState === 'complete') {
+          onLoad();
+      } else {
+          window.addEventListener('load', onLoad);
+      }
+  })()`}
+</Script>
+```
+
+This script ensures the Chatbase SDK is loaded properly, and the `addEventListener` and `removeEventListener` methods are available.
+
+---
+
+## Available Event Types
+
+The `eventName` parameter must be one of the following **enum** values:
+
+| **Event Name**      | **Description**                                  | **Payload**                                      |
+|---------------------|-------------------------------------------------|-------------------------------------------------|
+| `tool-call`         | Triggered when a tool is called.                 | `{ name, type, args, toolCallId }`               |
+| `tool-result`       | Triggered when a tool returns a result.         | `{ name, type, result, toolCallId }`             |
+| `user-message`      | Triggered when a user sends a message.          | `{ content }`                                   |
+| `assistant-message` | Triggered when the assistant sends a message.   | `{ content }`                                   |
+
+---
+
+## Adding an Event Listener
+
+To listen for a specific event, use the following syntax:
+
+```javascript
+window.chatbase.addEventListener(eventName, callback);
+```
+
+### Parameters
+
+- **`eventName`** (enum) — Must be one of the event names listed in [Available Event Types](#available-event-types).
+- **`callback`** (function) — Function to be called when the event is fired. The event payload is passed as an argument.
+
+### Example
+
+Listen for a user message:
+
+```javascript
+window.chatbase.addEventListener('user-message', (event) => {
+  console.log('User message received:', event.content);
+});
+```
+
+---
+
+## Removing an Event Listener
+
+To remove a listener for a specific event, use the following syntax:
+
+```javascript
+window.chatbase.removeEventListener(eventName, callback);
+```
+
+### Parameters
+
+- **`eventName`** (enum) — Must be one of the event names listed in [Available Event Types](#available-event-types).
+- **`callback`** (function) — The exact callback function used when adding the event listener.
+
+### Example
+
+Remove a user message listener:
+
+```javascript
+const userMessageHandler = (event) => {
+  console.log('User message received:', event.content);
+};
+
+// Attach the event listener
+window.chatbase.addEventListener('user-message', userMessageHandler);
+
+// Remove the event listener
+window.chatbase.removeEventListener('user-message', userMessageHandler);
+```
+
+---
+
+## Event Payloads
+
+Each event type has a specific payload. Below are the details for each event type:
+
+- **`tool-call`**
+
+  ```javascript
+  {
+    name: 'tool-name',
+    type: 'type-of-tool',
+    args: {},
+    toolCallId: 'unique-id'
+  }
+  ```
+
+- **`tool-result`**
+
+  ```javascript
+  {
+    name: 'tool-name',
+    type: 'type-of-tool',
+    result: {},
+    toolCallId: 'unique-id'
+  }
+  ```
+
+- **`user-message`**
+
+  ```javascript
+  {
+    content: 'Hello, chatbot!'
+  }
+  ```
+
+- **`assistant-message`**
+
+  ```javascript
+  {
+    content: 'Hello, user!'
+  }
+  ```
+
+---
+
+## Troubleshooting
+
+If you encounter issues, consider the following tips:
+
+1. **Check the event name.** Ensure you’re using a valid event name listed in [Available Event Types](#available-event-types).
+2. **Match the callback function.** Ensure the callback reference used in `removeEventListener` matches the one used in `addEventListener`.
+3. **Check SDK initialization.** Ensure the Chatbase script has loaded before registering event listeners.
+
+---
