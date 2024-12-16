@@ -47,7 +47,7 @@
 		},
 		{
 			"group": "Overview",
-			"pages": ["developer-guides/introduction"]
+			"pages": ["developer-guides/introduction", "developer-guides/identity-verification"]
 		}
 	],
 	"footerSocials": {
