@@ -31,20 +31,12 @@
 	},
 	"tabs": [
 		{
-			"name": "Product",
-			"url": "product"
-		},
-		{
 			"name": "Developer Guides",
 			"url": "developer-guides"
 		}
 	],
 	"anchors": [],
 	"navigation": [
-		{
-			"group": "Overview",
-			"pages": ["product/introduction"]
-		},
 		{
 			"group": "Overview",
 			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners"]
