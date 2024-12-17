@@ -33,7 +33,11 @@
 		{
 			"name": "Developer Guides",
 			"url": "developer-guides"
-		}
+		},
+        {
+        "name" : "Users Guide",
+        "url": "users-guide"
+        }
 	],
 	"anchors": [],
 	"navigation": [
