@@ -23,7 +23,11 @@ To ensure that you can register client-side custom actions, you need to embed th
 
 Here’s an example of the embed code you’ll find on the dashboard:
 
-![Chatbase Embed Code Example](images/chatbase-embed-script-example.png)
+```javascript
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://kimo.kono.com/embed.min.js";script.id="-xNu476gxAM9zhmsbedlP";script.domain="kimo.kono.com";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+```
 
 2. **Create the Client-Side Custom Action:**
 
