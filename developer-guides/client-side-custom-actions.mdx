@@ -5,7 +5,7 @@ icon: "code"
 
 ## Overview
 
-Custom actions can run on both the server, or on the client. It would be beneficial to run a custom action client side if the chatbot owner wants more flexibility with the action code, or wants to send an API request on behalf of the user, from the client side.
+Custom actions can run on both the server, or on the client. It would be beneficial to run a custom action client-side if the chatbot owner wants more flexibility with the action code, or wants to send an API request on behalf of the user, from the client side.
 
 ---
 
@@ -21,11 +21,17 @@ To ensure that you can register client-side custom actions, you need to embed th
 - Navigate to **Connect** > **Embed** > **Embed code with identity**.
 - Copy the embed code and add it to your application.
 
-There is no need to satisfy the Here’s an example of the embed code you’ll find on the dashboard:
+Here’s an example of the embed code you’ll find on the dashboard:
 
 ![Chatbase Embed Code Example](images/chatbase-embed-script-example.png)
 
 2. **Create the Client-Side Custom Action:**
+
+To create a client-side custom action:
+
+- Visit the **Chatbase Dashboard**
+- Navigate to **Create custom action**
+- Fill in the required fields, while choosing the type of the action to be client-side.
 
 3. **Use the SDK `registerTools` method:**
 
