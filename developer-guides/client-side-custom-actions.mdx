@@ -78,8 +78,21 @@ Custom actions should return responses in the following format:
 When the action is successful, return both the `data` and `status`:
 
 ```javascript
+//data should be either JSON or string
+
+// Example with JSON data
 {
-  data: { ... },  // Can be JSON object or string
+  data: {
+    temperature: 72,
+    condition: "sunny",
+    humidity: 45
+  },
+  status: "success"
+}
+
+// Example with string data
+{
+  data: "The weather in New York is currently 72°F and sunny",
   status: "success"
 }
 ```
