@@ -1,0 +1,90 @@
+---
+title: "Webflow"
+description: "Description of your new file."
+---
+
+## Step 1: Sign Into Your Chatbase Account and Set Up Your Chatbot
+
+1. Sign up for a free Chatbase account if you don't already have one.
+
+2. Log into your Chatbase account and navigate to the bot creation page.
+
+3. Provide training data for your new bot by uploading sources like text snippets, documents, website content, or Q\&A pairs.
+
+4. Train and test your bot in Chatbase until it responds accurately to queries.
+
+Not familiar with creating a Chatbase chatbot? Here is a [<u>step-by-step guide to building a chatbot with Chatbase</u>](https://www.chatbase.co/blog/step-by-step-guide-to-build-ai-chatbot).
+
+
+
+## Step 2: Copy Your Chatbot Embed Code
+
+Once you’ve set up and tested your Chatbase bot, you’ll need the embed code to display the bot widget on your website. To do this:
+
+1\. Go to the [dashboard](https://www.chatbase.co/dashboard/) of your Chatbase account.
+
+2\. You should see a list of chatbots, click the chatbot you wish to integrate into your Webflow website. You should be taken to the chatbot's preview page.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2Fb4d45b779372348610998b8e99cb9a4f4b016a79-1871x737.png&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+3\. On the chatbot preview page, click on the **Connect** tab.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2F34b6820704081b1c7517d392195d8832d23339bc-1581x873.png&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+5\. A new page should come up. Click on **Copy Iframe** to copy the provided HTML code.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2F30c32b268821633a78d7c130f840407eb84c5613-1547x845.png&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+## Step 3: Set Up a Container to Display Your Chatbot Widget 
+
+Before adding the embed code to your Webflow site, you will need to create a container to display the widget. This will ensure that the widget is displayed in the correct place on your website and doesn't extend the entire width of the page.
+
+1\. To create a container, on Webflow, log into your Webflow account and go to your dashboard.
+
+2\. On your Webflow dashboard, you’ll find a list of all your website projects, hover on the website you want to add the chatbot to and click on **Open Designer**.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2Ffe6652d4444c9004bd86da97eb2910a1183190a2-1895x787.jpg&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+3\. On the designer page, click on the file icon (**Pages**) on the top left corner of the webflow site designer and select the page you want to embed the chatbot.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2Ff7590a31875e09b0ba399c1ceeba1c4fa5c430af-1916x870.jpg&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+4\. Once you’ve selected the page, click the Plus button (**Add elements**) on the top left corner of the designer screen, and a list of available elements should come up.
+
+5\. Drag the **Section** element to the portion of the page you want to embed your chatbot.
+
+6\. Drag a **Container** element unto the **Section.**
+
+7\. Drag a **Div** element unto the Container element and set the size of the Div element to ensure that the bot will be contained within the Div and does not span the entire width of the page.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2Ffb6e301c48f6934d311a62712284b88ef88c201a-1556x850.jpg&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+
+
+8\. Now, scroll down down the list of elements and drag the **Embed** element unto the Div you added on the Webflow canvas.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2Ffc6f609e71d5d0570fc944207c559561a4f49e85-1547x887.jpg&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+9\. Select and double-click the Embed element to reveal the HTML Embed code editor.
+
+10\. Paste the Chatbase chatbot embed code from Step 2 above and click **Save & Close**.
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2Fdf27dbc81c2a97888efaac8985f131cbdefd741c-1593x888.jpg&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+
+
+If all goes well, you should see a preview of the chatbot on the live preview of your Webflow website right inside the designer.
+
+
+
+<img height="1080" width="1920" alt="[object Object]" src="https://www.chatbase.co/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fi6kpkyc7%2Fprod-dataset%2F243cd0f04e093ba0b86516c2282ec54fcc7adafd-1128x740.jpg&w=3840&q=75&dpl=dpl_Fo8LQ4kXtSZbRC7pANtwtHqZN44W" />
+
+
+
+After completing these steps, your chatbot should be ready to serve your website visitors!
+
+
+If you are having difficulties with managing the dimension of your Embed and chatbot element, it is a common problem. Webflow components take a bit of getting used to. You can follow this [official Webflow documentation on the Embed element](https://university.webflow.com/lesson/custom-code-embed?topics=elements) to learn more about embedding a third-party tool like Chatbase chatbot on a Webflow website.
+
+>
+> **Note:** You can customize the appearance and colors of your bot on your Chatbase dashboard. To do this, go to your **dashboard**, choose a bot, click the **Settings** tab on the top of the page, and then click **Chat Interface** on the left sidebar to reveal the chatbot customization option&#x73;**.**

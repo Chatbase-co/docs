@@ -34,17 +34,29 @@
 			"name": "Developer Guides",
 			"url": "developer-guides"
 		},
-        {
-        "name" : "Users Guide",
-        "url": "users-guide"
-        }
+		{
+			"name": "Developer Guides",
+			"url": "developer-guides"
+		}
 	],
 	"anchors": [],
 	"navigation": [
 		{
 			"group": "Overview",
-			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners", "developer-guides/client-side-custom-actions"]
-		}
+			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners"]
+		},
+        {
+        "group": "Analytics",
+        "pages": ["product/Analytics]"]
+        
+        },
+
+         {
+        "group": "AI Actions",
+        "pages": ["product/AIActions]"]
+        
+        },
+        
 	],
 	"footerSocials": {
 		"x": "https://x.com/chatbase_co",
