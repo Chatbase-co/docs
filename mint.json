@@ -43,7 +43,7 @@
 	"navigation": [
 		{
 			"group": "Overview",
-			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners"]
+			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners", "developer-guides/client-side-custom-actions"]
 		},
         {
         "group": "Analytics",
