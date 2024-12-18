@@ -40,12 +40,8 @@
 		{
 			"group": "Overview",
 			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners", "developer-guides/client-side-custom-actions"]
-		},
-        {
-        "group": "Dashboard",
-        "pages": ["user-guides/Playground", "user-guides/Activity", "user-guides/Analytics", "user-guides/Actions", "user-guides/Connect", "user-guides/Settings" ]
+		}
         
-        }
 
         
         
