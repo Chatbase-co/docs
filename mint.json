@@ -47,15 +47,11 @@
 		},
         {
         "group": "Analytics",
-        "pages": ["user-guides/Analytics]"]
+        "pages": ["user-guides/Analytics"]
         
-        },
+        }
 
-         {
-        "group": "AI Actions",
-        "pages": ["product/AIActions]"]
         
-        },
         
 	],
 	"footerSocials": {
