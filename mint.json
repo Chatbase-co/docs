@@ -35,8 +35,8 @@
 			"url": "developer-guides"
 		},
 		{
-			"name": "Developer Guides",
-			"url": "developer-guides"
+			"name": "User Guides",
+			"url": "user-guides"
 		}
 	],
 	"anchors": [],
@@ -47,7 +47,7 @@
 		},
         {
         "group": "Analytics",
-        "pages": ["product/Analytics]"]
+        "pages": ["user-guides/Analytics]"]
         
         },
 
