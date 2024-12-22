@@ -1,0 +1,57 @@
+The Get Chatbots API endpoint allows you to retrieve a list of all chatbots associated with your API key.
+
+## Endpoint
+
+```
+GET https://www.chatbase.co/api/v1/get-chatbots
+```
+
+## Request Headers
+
+The API request must include the following headers:
+
+- `Authorization: Bearer <Your-Secret-Key>` - The secret key for authenticating the API request.
+- `Accept: application/json` - The accepted response content type.
+
+## Example Request
+
+```python
+import requests
+
+url = "https://www.chatbase.co/api/v1/get-chatbots"
+
+headers = {"accept": "application/json"}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
+```
+
+```http
+GET /api/v1/get-chatbots HTTP/1.1
+Accept: application/json
+Host: www.chatbase.co
+```
+
+```javascript
+const options = {method: 'GET', headers: {accept: 'application/json'}}
+
+fetch('https://www.chatbase.co/api/v1/get-chatbots', options)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err))
+```
+
+```shell
+curl --request GET \
+     --url https://www.chatbase.co/api/v1/get-chatbots \
+     --header 'accept: application/json'
+```
+
+## Response
+
+- **200**: Returns an array `chatbots[]` containing each chatbot's parameters.
+- **401**: If the request is unauthorized.
+- **500**: If there is an internal server error.
+
+The Get Chatbots API endpoint provides a way to retrieve a list of all chatbots associated with your API key. Each entry in the response array contains all parameters of the respective chatbot.

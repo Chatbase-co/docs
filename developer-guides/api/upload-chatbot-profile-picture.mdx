@@ -1,0 +1,79 @@
+# Upload Chatbot Profile Picture API Guide
+
+The Upload Chatbot Profile Picture API endpoint allows you to update the profile picture of a specific chatbot.
+
+## Endpoint
+
+```
+POST https://www.chatbase.co/api/v1/upload-chatbot-profile-picture
+```
+
+## Request Headers
+
+The API request must include the following headers:
+
+- `Authorization: Bearer <Your-Secret-Key>` - The secret key for authenticating the API request.
+- `Accept: application/json` - The accepted response content type.
+- `Content-Type: multipart/form-data` - The content type for the form data.
+
+## Request Body
+
+The request body should be a multipart/form-data form containing the following parameters:
+
+- `chatbotId` (string, required): The unique identifier for the chatbot you want to update the profile picture for.
+- `profilePictureFile` (file, required): The profile picture file to be uploaded. The image must be a square (length = width) and its size must be under 1MB.
+
+## Example Request
+
+```shell
+curl --request POST \
+     --url https://www.chatbase.co/api/v1/upload-chatbot-profile-picture \
+     --header 'accept: application/json' \
+     --header 'content-type: multipart/form-data'
+```
+
+```http
+POST /api/v1/upload-chatbot-profile-picture HTTP/1.1
+Accept: application/json
+Content-Type: multipart/form-data
+Host: www.chatbase.co
+
+
+```
+
+```javascript
+const options = {
+  method: 'POST',
+  headers: {accept: 'application/json', 'content-type': 'multipart/form-data'},
+}
+
+fetch('https://www.chatbase.co/api/v1/upload-chatbot-profile-picture', options)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err))
+```
+
+```python
+import requests
+
+url = "https://www.chatbase.co/api/v1/upload-chatbot-profile-picture"
+
+headers = {
+    "accept": "application/json",
+    "content-type": "multipart/form-data"
+}
+
+response = requests.post(url, headers=headers)
+
+print(response.text)
+```
+
+## Response
+
+- **200**: Returns a confirmation message indicating the successful update of the chatbot's profile picture.
+- **400**: If the chatbot ID is missing.
+- **401**: If the request is unauthorized.
+- **404**: If the chatbot ID is invalid.
+- **500**: If there is an internal server error.
+
+The Upload Chatbot Profile Picture API endpoint provides a way to update the profile picture of a chatbot. Upon successful update, a confirmation message is returned in the response.

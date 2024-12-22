@@ -1,0 +1,64 @@
+The Delete Chatbot Icon API endpoint allows you to delete the icon associated with a specific chatbot.
+
+## Endpoint
+
+```
+DELETE https://www.chatbase.co/api/v1/delete-chatbot-icon
+```
+
+## Request Parameters
+
+- `chatbotId` (string, required): A unique identifier for the chatbot for which you want to delete the icon.
+
+## Example Request
+
+```shell
+curl --request DELETE \
+     --url https://www.chatbase.co/api/v1/delete-chatbot-icon \
+     --header 'accept: application/json'
+```
+
+```python Python
+import requests
+
+url = "https://www.chatbase.co/api/v1/delete-chatbot-icon"
+
+headers = {"accept": "application/json"}
+
+response = requests.delete(url, headers=headers)
+
+print(response.text)
+```
+
+```javascript
+const options = {method: 'DELETE', headers: {accept: 'application/json'}}
+
+fetch('https://www.chatbase.co/api/v1/delete-chatbot-icon', options)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err))
+```
+
+```Text HTTP
+DELETE /api/v1/delete-chatbot-icon HTTP/1.1
+Accept: application/json
+Host: www.chatbase.co
+```
+
+## Response
+
+- **200**: Reply confirming the successful deletion of the Chatbot icon.
+- **400**: If the chatbot ID is missing.
+- **401**: If the request is unauthorized.
+- **404**: If the chatbot cannot be found.
+- **500**: If there is an internal server error.
+
+### Example Response
+
+```json
+{
+  "message": "Chatbot icon deleted successfully."
+}
+```
+
+The Delete Chatbot Icon API endpoint provides a way to remove the icon associated with a chatbot. Upon successful deletion, a confirmation message is returned in the response.

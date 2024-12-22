@@ -1,0 +1,88 @@
+The Chatbot Deletion API allows you to delete a chatbot by providing the chatbot ID. This API can be used to remove a chatbot and its associated data from the system.
+
+## Endpoint
+
+```
+DELETE https://www.chatbase.co/api/v1/delete-chatbot
+```
+
+## Request Headers
+
+The API request must include the following header:
+
+- `Authorization: Bearer <Your-Secret-Key>` - The secret key for authenticating the API request.
+
+## Query Parameters
+
+The request URL should include the following query parameter:
+
+- `chatbotId` (required): A unique identifier for the chatbot that you want to delete. It helps identify the specific chatbot to be removed from the system.
+
+### Example Request URL
+
+```
+https://www.chatbase.co/api/v1/delete-chatbot?chatbotId=exampleId-123
+```
+
+## Response
+
+The API response will be a JSON object with the following structure:
+
+```json
+{
+  "message": "Deleted successfully"
+}
+```
+
+The `message` field in the response indicates the success of the chatbot deletion operation.
+
+## Examples
+
+```javascript JavaScript
+const res = await fetch(
+  'https://www.chatbase.co/api/v1/delete-chatbot?chatbotId=exampleId-123',
+  {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer <Your-Secret-Key>`,
+    },
+  }
+)
+
+const data = await res.json()
+
+console.log(data) // {message: 'Deleted successfully'}
+```
+
+```python
+import requests
+
+url = 'https://www.chatbase.co/api/v1/delete-chatbot'
+params = {'chatbotId': 'exampleId-123'}
+headers = {
+    'Authorization': 'Bearer <Your-Secret-Key>'
+}
+
+response = requests.delete(url, params=params, headers=headers)
+data = response.json()
+
+print(data)  # {'message': 'Deleted successfully'}
+```
+
+```shell
+curl "https://www.chatbase.co/api/v1/delete-chatbot?chatbotId=exampleId-123" \
+--request "DELETE" \
+-H 'Authorization: Bearer <Your-API-Key>'
+```
+
+```http
+DELETE /api/v1/delete-chatbot?chatbotId=exampleId-123 HTTP/1.1
+Host: www.chatbase.co
+Authorization: Bearer <Your-Secret-Key>
+```
+
+## Error Handling
+
+If there are any errors during the API request, appropriate HTTP status codes will be returned along with error messages in the response body. Make sure to handle these errors gracefully in your application.
+
+That's it! You should now be able to delete a chatbot using the Chatbot Deletion API.

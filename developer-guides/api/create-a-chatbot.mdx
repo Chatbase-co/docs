@@ -1,0 +1,98 @@
+The Chatbot Creation API allows you to create a new chatbot by making a `POST` request to the `/api/v1/create-chatbot` endpoint.
+
+## Endpoint
+
+```
+POST https://www.chatbase.co/api/v1/create-chatbot
+```
+
+## Request Headers
+
+The API request must include the following headers:
+
+- `Authorization: Bearer <Your-Secret-Key>` - The secret key for authenticating the API request.
+- `Content-Type: application/json` - The content type of the request payload.
+
+## Request Body
+
+The request body should contain the following parameters:
+
+- `chatbotName` (string, required): The name of the chatbot to be created.
+- `sourceText` (string, optional): The text data for the chatbot. This field is subject to the character limit based on your plan
+
+## Example Request
+
+```javascript
+const res = await fetch('https://www.chatbase.co/api/v1/create-chatbot', {
+  method: 'POST',
+  headers: {
+    Authorization: `Bearer <Your-Secret-Key>`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    chatbotName: 'example chatbot',
+    sourceText: 'Source text......',
+  }),
+})
+
+const data = await res.json()
+
+console.log(data) // {chatbotId: 'exampleId-123'}
+```
+
+```python
+import requests
+import json
+
+url = 'https://www.chatbase.co/api/v1/create-chatbot'
+headers = {
+    'Authorization': 'Bearer <Your-Secret-Key>',
+    'Content-Type': 'application/json'
+}
+data = {
+    'chatbotName': 'example chatbot',
+    'sourceText': 'Source text......'
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(data))
+data = response.json()
+
+print(data)  # {'chatbotId': 'exampleId-123'}
+```
+
+```shell
+curl https://www.chatbase.co/api/v1/create-chatbot \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer <Your-API-Key>' \
+  -d '{"urlsToScrape": ["https://www.chatbase.co/docs/chat", "https://www.chatbase.co/docs/create-chatbot"], "chatbotName": "Chatbase"}'
+```
+
+```http
+POST /api/create-chatbot HTTP/1.1
+Host: https://www.chatbase.co/api/v1/create-chatbot
+Authorization: Bearer <Your-Secret-Key>
+Content-Type: application/json
+
+{
+  "chatbotName": "example chatbot",
+  "sourceText": "Source text......"
+}
+```
+
+## Response
+
+The API response will be a JSON object with the following structure:
+
+```json
+{
+  "chatbotId": "exampleId-123"
+}
+```
+
+The `chatbotId` field in the response contains the unique identifier assigned to the created chatbot.
+
+## Error Handling
+
+If there are any errors during the API request, appropriate HTTP status codes will be returned along with error messages in the response body. Make sure to handle these errors gracefully in your application.
+
+That's it! You should now be able to create a chatbot using the create API.

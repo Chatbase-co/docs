@@ -38,10 +38,30 @@
 	"anchors": [],
 	"navigation": [
 		{
-			"group": "Overview",
+			"group": "Javascript SDK",
 			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners", "developer-guides/client-side-custom-actions"]
+		},
+
+
+		{
+			"group": "API",
+			"pages": [
+				"developer-guides/api/create-a-chatbot",
+				"developer-guides/api/get-chatbots",
+				"developer-guides/api/update-a-chatbot",
+				"developer-guides/api/delete-a-chatbot",
+				"developer-guides/api/upload-chatbot-icon",
+				"developer-guides/api/delete-chatbot-icon",
+				"developer-guides/api/upload-chatbot-profile-picture",
+				"developer-guides/api/delete-chatbot-profile-picture",
+				"developer-guides/api/update-chatbot-settings",
+				"developer-guides/api/message-a-chatbot",
+				"developer-guides/api/streaming-messages",
+				"developer-guides/api/get-conversations",
+				"developer-guides/api/get-leads",
+				"developer-guides/api/webhooks"
+			]
 		}
-        
 
         
         
