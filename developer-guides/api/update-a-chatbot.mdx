@@ -10,17 +10,17 @@ POST https://www.chatbase.co/api/v1/update-chatbot-data
 
 The API request must include the following header:
 
-* `Authorization: Bearer <Your-Secret-Key>` - The secret key for authenticating the API request.
+- `Authorization: Bearer <Your-Secret-Key>` - The secret key for authenticating the API request.
 
 ## Request Payload
 
 The request payload should be sent as a JSON object in the body of the API request. The payload can include the following parameters:
 
-* `chatbotId` (required): A unique identifier for the chatbot. It helps to identify the specific chatbot whose data needs to be updated.
+- `chatbotId` (required): A unique identifier for the chatbot. It helps to identify the specific chatbot whose data needs to be updated.
 
-* `chatbotName` (required): The new name for the chatbot. This parameter allows you to update the name of the chatbot.
+- `chatbotName` (required): The new name for the chatbot. This parameter allows you to update the name of the chatbot.
 
-* `sourceText` (optional): The new source text to update the chatbot. This parameter should contain the new text content that replaces the existing data. The source text should be less than the character limit allowed by your plan.
+- `sourceText` (optional): The new source text to update the chatbot. This parameter should contain the new text content that replaces the existing data. The source text should be less than the character limit allowed by your plan.
 
 ## Example Request
 
@@ -71,7 +71,7 @@ curl https://www.chatbase.co/api/v1/update-chatbot-data \
   -d '{
     "chatbotId": "example-123",
     "chatbotName": "new name",
-    "sourceText": 'Source text that is less than your plan character limit...'
+    "sourceText": "Source text that is less than your plan character limit..."
   }'
 ```
 

@@ -34,20 +34,21 @@
 			"name": "Developer Guides",
 			"url": "developer-guides"
 		},
-        
-        {
-			"name": "User Guide",
-			"url": "user-guide"
+		{
+			"name": "User Guides",
+			"url": "user-guides"
 		}
 	],
 	"anchors": [],
 	"navigation": [
 		{
 			"group": "Javascript SDK",
-			"pages": ["developer-guides/identity-verification", "developer-guides/chatbot-event-listeners", "developer-guides/client-side-custom-actions"]
+			"pages": [
+				"developer-guides/identity-verification",
+				"developer-guides/chatbot-event-listeners",
+				"developer-guides/client-side-custom-actions"
+			]
 		},
-
-
 		{
 			"group": "API",
 			"pages": [
@@ -67,27 +68,25 @@
 				"developer-guides/api/webhooks"
 			]
 		},
-          {
-        "group": "Team Settings",
-        "pages": [
-        "user-guides/General-Settings",
-        "user-guides/Usage"
-        ]
-        },
-
-        {
-        "group": "Chatbot Settings",
-        "pages": ["user-guides/Playground",
-        "user-guides/Activity",
-        "user-guides/Analytics",
-        "user-guides/Sources",
-        "user-guides/Actions",
-        "user-guides/Connect",
-        "user-guides/Settings"]
-        }
-
-        
-        
+		{
+			"group": "Team",
+			"pages": [
+				"user-guides/team/settings",
+				"user-guides/team/usage"
+			]
+		},
+		{
+			"group": "Chatbot",
+			"pages": [
+				"user-guides/chatbot/playground",
+				"user-guides/chatbot/activity",
+				"user-guides/chatbot/analytics",
+				"user-guides/chatbot/sources",
+				"user-guides/chatbot/actions",
+				"user-guides/chatbot/connect",
+				"user-guides/chatbot/settings"
+			]
+		}
 	],
 	"footerSocials": {
 		"x": "https://x.com/chatbase_co",
