@@ -33,6 +33,11 @@
 		{
 			"name": "Developer Guides",
 			"url": "developer-guides"
+		},
+        
+        {
+			"name": "User Guide",
+			"url": "user-guide"
 		}
 	],
 	"anchors": [],
@@ -61,7 +66,25 @@
 				"developer-guides/api/get-leads",
 				"developer-guides/api/webhooks"
 			]
-		}
+		},
+          {
+        "group": "Team Settings",
+        "pages": [
+        "user-guides/General-Settings",
+        "user-guides/Usage"
+        ]
+        },
+
+        {
+        "group": "Chatbot Settings",
+        "pages": ["user-guides/Playground",
+        "user-guides/Activity",
+        "user-guides/Analytics",
+        "user-guides/Sources",
+        "user-guides/Actions",
+        "user-guides/Connect",
+        "user-guides/Settings"]
+        }
 
         
         
