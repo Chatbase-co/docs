@@ -56,7 +56,8 @@
 			"group": "Team",
 			"pages": [
 				"user-guides/team/settings",
-				"user-guides/team/usage"
+				"user-guides/team/usage",
+                "user-guides/team/team-changes"
 			]
 		},
 		{
