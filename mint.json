@@ -35,6 +35,10 @@
 			"url": "user-guides"
 		},
 		{
+			"name": "Integrations",
+			"url": "integrations"
+		},
+		{
 			"name": "Developer Guides",
 			"url": "developer-guides"
 		}
@@ -42,33 +46,6 @@
 	"anchors": [],
 	"navigation": [
 		{
-			"group": "Javascript SDK",
-			"pages": [
-				"developer-guides/identity-verification",
-				"developer-guides/chatbot-event-listeners",
-				"developer-guides/client-side-custom-actions"
-			]
-		},
-		{
-			"group": "API",
-			"pages": [
-				"developer-guides/api/create-a-chatbot",
-				"developer-guides/api/get-chatbots",
-				"developer-guides/api/update-a-chatbot",
-				"developer-guides/api/delete-a-chatbot",
-				"developer-guides/api/upload-chatbot-icon",
-				"developer-guides/api/delete-chatbot-icon",
-				"developer-guides/api/upload-chatbot-profile-picture",
-				"developer-guides/api/delete-chatbot-profile-picture",
-				"developer-guides/api/update-chatbot-settings",
-				"developer-guides/api/message-a-chatbot",
-				"developer-guides/api/streaming-messages",
-				"developer-guides/api/get-conversations",
-				"developer-guides/api/get-leads",
-				"developer-guides/api/webhooks"
-			]
-		},
-{
 			"group": "Quick Start",
 			"pages": [
 				"user-guides/quick-start/introduction",
@@ -91,7 +68,41 @@
 				"user-guides/chatbot/sources",
 				"user-guides/chatbot/actions",
 				"user-guides/chatbot/connect",
-				"user-guides/chatbot/settings"
+				"user-guides/quick-start/settings"
+			]
+		},
+		{
+			"group": "Javascript SDK",
+			"pages": [
+				"developer-guides/identity-verification",
+				"developer-guides/chatbot-event-listeners",
+				"developer-guides/client-side-custom-actions"
+			]
+		},
+		{
+			"group": "Integrations",
+			"pages": [
+				"integrations/quick-start/introduction",
+				"integrations/quick-start/response-quality"
+			]
+		},
+		{
+			"group": "API",
+			"pages": [
+				"developer-guides/api/create-a-chatbot",
+				"developer-guides/api/get-chatbots",
+				"developer-guides/api/update-a-chatbot",
+				"developer-guides/api/delete-a-chatbot",
+				"developer-guides/api/upload-chatbot-icon",
+				"developer-guides/api/delete-chatbot-icon",
+				"developer-guides/api/upload-chatbot-profile-picture",
+				"developer-guides/api/delete-chatbot-profile-picture",
+				"developer-guides/api/update-chatbot-settings",
+				"developer-guides/api/message-a-chatbot",
+				"developer-guides/api/streaming-messages",
+				"developer-guides/api/get-conversations",
+				"developer-guides/api/get-leads",
+				"developer-guides/api/webhooks"
 			]
 		}
 	],
