@@ -11,20 +11,40 @@ Check the steps to integrate Slack with Chatbase through this page.
 
 1. Click on the **Create Action** button of Slack in the AI Actions menu:
 
-![Chatbase Embed Code Example](images/actions/actions-1.png)
+<img 
+  src="images/actions/actions-1.png" 
+  alt="Chatbase Embed Code Example" 
+  width="300" 
+  style={{ margin: 'auto' }} 
+/>
 
 2. Choose the Slack workspace that you want to be connected with this Action:
 
-![Chatbase Embed Code Example](images/actions/actions-2.png)
+<img 
+  src="images/actions/actions-2.png" 
+  alt="Chatbase Embed Code Example" 
+  width="300" 
+  style={{ margin: 'auto' }} 
+/>
 
 3. In the **When to use** section, provide a detailed description explaining when we should use this action. Include examples of the data this action provides and customer queries it helps answer. 
-![Chatbase Embed Code Example](images/actions/actions-3.png)
 
+<img 
+  src="images/actions/actions-3.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 4. Click on Save button.
 
 5. Make sure to enable this action to allow us to send a message to your Slack channel.
-![Chatbase Embed Code Example](images/actions/actions-4.png)
+
+<img 
+  src="images/actions/actions-4.png" 
+  alt="Chatbase Embed Code Example" 
+  style={{ margin: 'auto' }} 
+/>
 
 Now, you can try this action in the Playground on the right side of the page. It’s recommended to try sending a message in the Action preview to ensure that the chatbot sends a message to your Slack channel when the desired instructions are fulfilled before enabling the action.
 
@@ -32,11 +52,21 @@ Examples:
 
 “Call this tool to send a message in slack to the channel named: ai-actions-slack whenever the user mentions any of the following topics: standard plan”
 
-![Chatbase Embed Code Example](images/actions/actions-5.gif)
+<img 
+  src="images/actions/actions-5.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="400" 
+  style={{ margin: 'auto' }} 
+/>
 
 Once the user mentioned the standard plan, a Slack notification is sent to the channel connected to this action:
 
-![Chatbase Embed Code Example](images/actions/actions-6.png)
+<img 
+  src="images/actions/actions-6.png" 
+  alt="Chatbase Embed Code Example" 
+  width="500" 
+  style={{ margin: 'auto' }} 
+/>
 
 ## Add Custom Button
 
@@ -45,21 +75,43 @@ The Custom Button action allows the chatbot to send a clickable button to the us
 * Action name:&#x9;
 
 This field is only showing the name of the action in the dashboard. 
-![Chatbase Embed Code Example](images/actions/actions-7.png)
+
+<img 
+  src="images/actions/actions-7.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 * When to use:
   This is the area of instructions that should be provided as a detailed description explaining when the chatbot should use this action. It’s recommended to include examples of the data this action provides and customer queries it helps answer. 
-![Chatbase Embed Code Example](images/actions/actions-8.png)
+
+<img 
+  src="images/actions/actions-8.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 * Button text:
   This is the text shown on the button provided to the users once asked about a specific topic. ![Chatbase Embed Code Example](images/actions/actions-9.png)
 
-![Chatbase Embed Code Example](images/actions/actions-10.png)
+<img 
+  src="images/actions/actions-10.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 * URL:
   This is where to add the URL that the button should route the users to. 
  
-![Chatbase Embed Code Example](images/actions/actions-11.png)
+<img 
+  src="images/actions/actions-11.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 After finishing the Custom Button configuration, you should click on the Save button. Then the action should be enabled from the top right corner in the page.
 
@@ -69,7 +121,12 @@ Example:
 
 “Provide the user a button when they ask about the pricing plans, the difference between any of Chatbase plans or the features available in each one. For example, when the user asks about the number of chatbots in the standard plan, you should let him know that the plan offers 5 chatbots and provide the button of the pricing page.”
 
-![Chatbase Embed Code Example](images/actions/actions-12.gif)
+<img 
+  src="images/actions/actions-12.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="300" 
+  style={{ margin: 'auto' }} 
+/>
 
 ## Create Custom Action
 
@@ -96,7 +153,12 @@ This action allows you to instruct the chatbot to provide any information that�
 
     * Description: A small sentence that describes to the chatbot the data input that it’s expecting to use in the API.
 
-![Chatbase Embed Code Example](images/actions/actions-13.png)
+<img 
+  src="images/actions/actions-13.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 * API request:
   The API endpoint that should be called by the AI Agent to retrieve data or to send updates. You can include data inputs (variables) collected from the user in the URL or the request body.
@@ -107,7 +169,12 @@ This action allows you to instruct the chatbot to provide any information that�
 
   * Add variable: This button should be used when you want to add a variable that depends on the user’s input.
 
-![Chatbase Embed Code Example](images/actions/actions-14.png)
+<img 
+  src="images/actions/actions-14.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 When the URL is added, the parameters, Headers and Body of the API should be added automatically.
 
@@ -141,45 +208,85 @@ In this example, we use a Get Weather API to provide the weather information for
 
 In the General section, we added Get\_Weather as a name of the action. We provided the When to use information for the chatbot to use this API whenever it’s asked about the weather of any city.
 
-![Chatbase Embed Code Example](images/actions/actions-15.png)
+<img 
+  src="images/actions/actions-15.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 In the API section, we added the API used to retrieve the weather information. We added the name of the input as City, the type of the input is Text, and the description of the input as follows: The city that you want to know its weather.
 
-![Chatbase Embed Code Example](images/actions/actions-16.png)
+<img 
+  src="images/actions/actions-16.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 In the API request section, we added the API URL (https://wttr.in/\{\{city}}?format=j1) and set the method as GET. The key value pair in the parameters is added automatically after entering the URL.
 
-![Chatbase Embed Code Example](images/actions/actions-17.gif)
+<img 
+  src="images/actions/actions-17.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 In the Test Response section, we tested the response of the API when we provided London as a city example. 
 
-![Chatbase Embed Code Example](images/actions/actions-18.gif)
+<img 
+  src="images/actions/actions-18.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 In the Data Access section, we choose the Full Data Access option for the chatbot to access all the information from the API response.
 
-![Chatbase Embed Code Example](images/actions/actions-19.png)
+<img 
+  src="images/actions/actions-19.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 Now, we’re ready to ask the chatbot the weather of any city the user asks about in the Playground area on the left side of the page.
 
-![Chatbase Embed Code Example](images/actions/actions-20.gif)
+<img 
+  src="images/actions/actions-20.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="300" 
+  style={{ margin: 'auto' }} 
+/>
 
 ## Booking Appointments
 
 It’s now possible for your customers to book appointments straight through the chatbot. All you have to do is to enable either one of our pre-built actions, Cal.com or Calendly.com.
 
-## **Calendly**
+### **Calendly**
 
 In order to create this action, you would first need to integrate with your Calendly account.
 
 After successfully connecting your Calendly account, you can head back to the actions page to configure your Calendly action. 
 
-![Chatbase Embed Code Example](images/actions/actions-21.gif)
+<img 
+  src="images/actions/actions-21.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 Make sure to select the Event that the bot can get the available slots from to be able to proceed.
 
-![Chatbase Embed Code Example](images/actions/actions-22.png)
+<img 
+  src="images/actions/actions-22.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
-### **When to use**
+ **When to use**
 
 This is where you specify when exactly this action should be triggered or what type of customer queries would trigger it. You can also add in some instructions that the bot should adhere to when this action is triggered.
 
@@ -189,13 +296,18 @@ Examples:
 
 “The window can only be 1 week long, if the user specified a longer period, use the same starting time, and the ending time should be 1 week later, responding to the user that the window cannot be longer than 1 week.”
 
-![Chatbase Embed Code Example](images/actions/actions-23.gif)
+<img 
+  src="images/actions/actions-23.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
-## Cal.com
+### Cal.com
 
 All you need to do to connect your Cal account is to add your Event URL under ‘Cal.com Event URL’. You **do not** need an integration for Cal.com.
 
-### **When to use**
+**When to use**
 
 This is where you specify when exactly this action should be triggered or what type of customer queries would trigger it. You can also add in some instructions that the bot should adhere to when this action is triggered. 
 
@@ -205,9 +317,14 @@ Examples: 
 
 “Check if the user booked an appointment or not from the tool result.” 
 
-![Chatbase Embed Code Example](images/actions/actions-cal2.gif)
+<img 
+  src="images/actions/actions-cal2.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
-**Collect Leads**
+# Collect Leads
 
 Through the Collect Leads action, you will be able to customize when exactly does the ‘Lead’ form get triggered during the conversation that your customer is having with the bot.
 
@@ -225,27 +342,50 @@ Things to keep in mind when writing instructions:
 
 * Focus on what you’d like the bot to do rather than what to avoid. ​​Start your prompts with action-oriented verbs, e.g., generate, create, and provide.
 
-*
-
-![Chatbase Embed Code Example](images/actions/actions-26.png)
+<img 
+  src="images/actions/actions-26.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 **Success Message Title:** Customize the title of the message that gets displayed once the customer submits the form.
 
 **Success Message Description:** Customize the message that gets displayed once the customer submits the form.
 
-![Chatbase Embed Code Example](images/actions/actions-27.png)
+<img 
+  src="images/actions/actions-27.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 **Dismiss Message:** Customize the message that shows once the customer dismisses the form by clicking on the ‘X’ button.
 
+<img 
+  src="images/actions/actions-lead-dismissed.jpg" 
+  alt="Chatbase Embed Code Example" 
+  width="300" 
+  style={{ margin: 'auto' }} 
+/>
+
 You have the option to enable/disable any of the three available fields in the form (Name, E-mail and Phone Number). You also can set any of them (or all of them) to be a required field.
 
-![Chatbase Embed Code Example](images/actions/actions-28.png)
-
-![Chatbase Embed Code Example](images/actions/actions-29.png)
+<img 
+  src="images/actions/actions-29.png" 
+  alt="Chatbase Embed Code Example" 
+  width="300" 
+  style={{ margin: 'auto' }} 
+/>
 
 After you’re done editing, you can preview all your settings in the chatbot found on the Action page.
 
-![Chatbase Embed Code Example](images/actions/actions-30.gif)
+<img 
+  src="images/actions/actions-30.gif" 
+  alt="Chatbase Embed Code Example" 
+  width="300" 
+  style={{ margin: 'auto' }} 
+/>
 
 ## Web Search
 
@@ -257,20 +397,34 @@ This is where you specify when exactly this action should be triggered or what t
 
 The web search action can be used as an additional source of information where the chatbot can get some information that isn't available in the sources. It’s recommended to add websites that are related to your business field. 
 
-![Chatbase Embed Code Example](images/actions/actions-31.png)
+<img 
+  src="images/actions/actions-31.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 Include images
 
 This allows the chatbot to provide images as replies to the users elaborating the answer provided.
 
-![Chatbase Embed Code Example](images/actions/actions-32.png)
+<img 
+  src="images/actions/actions-32.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 Included domains
 
 This option allows you to add specific domains that the chatbot can use to search the answer. If you didn’t add any domains, the chatbot will search over the whole web. 
 
-![Chatbase Embed Code Example](images/actions/actions-33.png)
-
+<img 
+  src="images/actions/actions-33.png" 
+  alt="Chatbase Embed Code Example" 
+  width="600" 
+  style={{ margin: 'auto' }} 
+/>
 
 ## General Notes
 

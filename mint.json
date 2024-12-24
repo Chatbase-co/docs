@@ -55,9 +55,9 @@
 		{
 			"group": "Team",
 			"pages": [
-				"user-guides/team/settings",
+                "user-guides/team/manage",
 				"user-guides/team/usage",
-                "user-guides/team/team-changes"
+				"user-guides/team/settings"
 			]
 		},
 		{
@@ -69,7 +69,7 @@
 				"user-guides/chatbot/sources",
 				"user-guides/chatbot/actions",
 				"user-guides/chatbot/connect",
-				"user-guides/quick-start/settings"
+				"user-guides/chatbot/settings"
 			]
 		},
 		{
