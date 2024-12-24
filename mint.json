@@ -82,8 +82,18 @@
 		{
 			"group": "Integrations",
 			"pages": [
-				"integrations/quick-start/introduction",
-				"integrations/quick-start/response-quality"
+				"integrations/bubble",
+				"integrations/framer",
+				"integrations/instagram",
+				"integrations/messenger",
+				"integrations/shopify",
+				"integrations/slack",
+				"integrations/webflow",
+				"integrations/weebly",
+				"integrations/whatsapp",
+				"integrations/wix",
+				"integrations/wordpress",
+				"integrations/zapier"
 			]
 		},
 		{
