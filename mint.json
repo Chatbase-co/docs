@@ -31,12 +31,12 @@
 	},
 	"tabs": [
 		{
-			"name": "Developer Guides",
-			"url": "developer-guides"
-		},
-		{
 			"name": "User Guides",
 			"url": "user-guides"
+		},
+		{
+			"name": "Developer Guides",
+			"url": "developer-guides"
 		}
 	],
 	"anchors": [],
@@ -66,6 +66,13 @@
 				"developer-guides/api/get-conversations",
 				"developer-guides/api/get-leads",
 				"developer-guides/api/webhooks"
+			]
+		},
+{
+			"group": "Quick Start",
+			"pages": [
+				"user-guides/quick-start/introduction",
+				"user-guides/quick-start/response-quality"
 			]
 		},
 		{
